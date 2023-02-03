@@ -42,5 +42,17 @@ namespace FileIO_Operations
             Console.WriteLine(text);
             Console.ReadLine();
         }
-    }
+
+        public void CopyPath()
+        {
+            Console.WriteLine("\n**********Copy File Path**********");
+            string filePath = @"D:\RFP-244\FileIO\FileIO_Operations\FileIO_Operations\Program.cs";
+            string copyFilePath = @"D:\RFP-244\FileIO\FileIO_Operations\FileIO_Operations\WordFile2.txt";
+            File.Copy(filePath, copyFilePath);
+            Console.WriteLine("\nCopied Successfully");
+            string copiedText;
+            copiedText = File.ReadAllText(copyFilePath);
+            Console.WriteLine(copiedText);
+        }
+}
 }
