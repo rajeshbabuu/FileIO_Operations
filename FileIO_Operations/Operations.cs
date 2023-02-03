@@ -32,5 +32,15 @@ namespace FileIO_Operations
             Console.WriteLine(lines[1]);
             Console.ReadLine();
         }
+
+        public void ReadAllText()
+        {
+            Console.WriteLine("\n**********Read All Text**********\n");
+            string filePath = @"D:\RFP-244\FileIO\FileIO_Operations\FileIO_Operations\WordFile1.txt";
+            string text;
+            text = File.ReadAllText(filePath);
+            Console.WriteLine(text);
+            Console.ReadLine();
+        }
     }
 }
